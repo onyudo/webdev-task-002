@@ -1,0 +1,121 @@
+@import url("utility.css");
+
+
+.grid-container {
+    display: grid;
+    gap: 2rem;
+}
+  
+.grid-item {
+    background-color: rgba(var(--grid-color), 0.25);
+    border: 1px solid rgba(var(--grid-color), 1);
+    border-radius: 1rem;
+    padding: 2em;
+}
+
+nav {
+    grid-template-columns: auto auto;
+    padding-bottom: 2em;
+}
+
+.main-nav {
+    display: none;
+}
+
+nav > li {
+    display: grid;
+    list-style: none;
+    width: fit-content;
+}
+
+.toggle {
+    margin-left: auto;
+}
+
+main {
+    padding-bottom: 2em;;
+}
+
+.project-title {
+    padding-bottom: 2em;
+}
+
+.project-slideshow {
+    padding-bottom: 2em;
+    height: 700px;
+}
+
+.project-write-up {
+    padding-bottom: 2em;
+}
+
+.project-text {
+    height: 500px;
+}
+
+footer-nav {
+    justify-items: center; 
+}
+
+.footer-nav {
+    display: grid;
+    width: fit-content;
+}
+
+li > .footer-nav {
+    list-style: none;
+}
+
+footer-2 {
+    text-align: center;
+}
+
+@media (width >= 950px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        grid-auto-flow: column; 
+        gap: 10px; 
+        justify-content: start;
+    }
+
+    .main-nav {
+        display: inline;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .project-slideshow {
+        grid-column: 1; /* Place slideshow in the first column */
+        grid-row: 1 / span 2; /* Span both rows for slideshow */
+    }
+    
+    .project-title {
+        grid-column: 2; /* Place title in the second column */
+        grid-row: 1; /* Top row for title */
+        height: fit-content;
+    }
+    
+    .project-write-up {
+        grid-column: 2; /* Place write-up in the second column */
+        grid-row: 2; /* Bottom row for write-up */
+    }
+
+    footer-nav {
+        justify-content: start;
+        grid-auto-flow: column; 
+    }
+
+    footer-2 {
+        justify-content: start;
+    }
+    
+}
+  

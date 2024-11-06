@@ -1,0 +1,88 @@
+@import url("utility.css");
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #AFB6BE;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+.flex-item {
+    border: 1px solid rgba(var(--flex-color), 1);
+    padding: 2em;
+    border-radius: 1rem;
+}
+
+.header {
+    background-color: #9B2764;
+    gap: 1rem;
+    order: 1;
+}
+
+aside {
+    background-color: #186494;
+    order: 3;
+}
+
+section {
+    background-color: #39B47E;
+    border: 1px solid rgba(var(--flex-color), 1);
+    padding: 2em;
+    border-radius: 1rem;
+    order: 2;
+}
+
+article {
+    background-color: #DD255E;
+}
+
+.footer {
+    background-color: #DB6C32;
+    order: 4;
+}
+
+@media (width >= 1147px) {
+
+    .flex-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+  
+    .header, .footer {
+        flex-basis: 100%;
+    }
+
+    main {
+        align-items: center;
+        flex-basis: 100%;
+        flex-direction: row;
+    }
+
+    aside {
+        flex-basis: 23.5%;
+        height: 350px;
+        order: 1;
+    }
+
+    section {
+        flex-direction: column;
+        flex: 0 0 75%;
+        height: 350px;
+        order: 2;
+    }
+
+    .col {
+        flex-direction: column;
+        flex: 0 0 100%;
+        height: fit-content;
+    }
+
+}
